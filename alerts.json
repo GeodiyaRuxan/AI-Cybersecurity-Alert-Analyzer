@@ -1,0 +1,49 @@
+[
+    {
+        "alert_id": "ALERT-001",
+        "event_type": "Failed Windows Authentication",
+        "event_id": 4625,
+        "username": "administrator",
+        "source_ip": "192.168.1.50",
+        "failed_attempts": 45,
+        "time_period": "5 minutes",
+        "target_machine": "DC01"
+    },
+    {
+        "alert_id": "ALERT-002",
+        "event_type": "Suspicious PowerShell Execution",
+        "username": "jsmith",
+        "source_ip": "192.168.1.25",
+        "process": "powershell.exe",
+        "command": "powershell -enc <encoded_command>",
+        "target_machine": "WORKSTATION-07"
+    },
+    {
+        "alert_id": "ALERT-003",
+        "event_type": "Potential DNS Tunneling",
+        "source_ip": "192.168.1.40",
+        "destination": "suspicious.example.com",
+        "dns_queries": 850,
+        "time_period": "10 minutes",
+        "average_query_length": 87,
+        "target_machine": "WORKSTATION-12"
+    },
+    {
+        "alert_id": "ALERT-004",
+        "event_type": "Suspicious Email Attachment",
+        "sender": "unknown@example.com",
+        "recipient": "employee@company.com",
+        "attachment": "invoice_update.xlsm",
+        "macro_enabled": true,
+        "user_opened_attachment": true
+    },
+    {
+        "alert_id": "ALERT-005",
+        "event_type": "Possible Credential Dumping",
+        "username": "admin",
+        "source_ip": "192.168.1.60",
+        "process": "suspicious.exe",
+        "accessed_process": "lsass.exe",
+        "target_machine": "SERVER-03"
+    }
+]
